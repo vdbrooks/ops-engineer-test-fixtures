@@ -1,0 +1,13 @@
+provider "aws" {
+  region = var.aws_region
+
+  default_tags {
+    tags = {
+      ManagedBy   = "terraform"
+      Environment = var.environment
+      Team        = "platform"
+    }
+  }
+}
+
+provider "random" {}
